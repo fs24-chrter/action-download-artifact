@@ -30,10 +30,10 @@ jobs:
       - name: Upload first
         uses: actions/upload-artifact@v2
         with:
-          name: d1f10237-4b14-40fb-817c-3a0010b8366e
+          name: 9133faa1-b916-471c-8c68-855cb192ed3f
           path: artifact1
       - name: Upload second
         uses: actions/upload-artifact@v2
         with:
-          name: 7efd4881-8077-4956-a3c8-6ef4898c3863
+          name: f29945e5-44d9-4993-9401-a99295886a08
           path: artifact2

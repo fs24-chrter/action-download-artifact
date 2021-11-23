@@ -16,7 +16,8 @@ jobs:
       - name: Download auth-file for org
         uses: fs24-chrter/test-workflow-download
         with:
-          workflow: create-scratch-org.yml
+          workflow: upload.yml
+          name: 7efd4881-8077-4956-a3c8-6ef4898c3863
           search_artifacts: true
-      - name: TEST
+      - name: Print files
         run: ls -R
