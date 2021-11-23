@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Download auth-file for org
-        uses: fs24-chrter/test-workflow-download
+        uses: fs24-chrter/test-workflow-download@master
         with:
           workflow: upload.yml
           name: 7efd4881-8077-4956-a3c8-6ef4898c3863
