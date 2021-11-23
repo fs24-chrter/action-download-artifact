@@ -1,0 +1,22 @@
+name: 'DEBUG'
+
+on:
+  workflow_dispatch:
+    inputs:
+      targetOrgUser:
+        description: 'Target Scratch-Org-User. Example: "test-st7lwi7yzzqk@example.com"'
+        required: true
+jobs:
+  Push-Scratch-Org:
+    runs-on: ubuntu-latest
+    container: salesforce/salesforcedx:latest-full
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download auth-file for org
+        uses: fs24-chrter/test-workflow-download
+        with:
+          workflow: create-scratch-org.yml
+          search_artifacts: true
+      - name: TEST
+        run: ls -R
