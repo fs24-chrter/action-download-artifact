@@ -78,15 +78,18 @@ async function main() {
                         continue
                     }
                     if (checkArtifacts || searchArtifacts) {
+                        console.log("==> Checking run:", run.id)
                         let artifacts = await client.actions.listWorkflowRunArtifacts({
                             owner: owner,
                             repo: repo,
                             run_id: run.id,
                         })
+                        console.log("==> Found artifacts:", artifacts)
                         if (artifacts.data.artifacts.length == 0) {
                             continue
                         }
                         if (searchArtifacts) {
+                            console.log("==> Checking artifacts for name:", name)
                             const artifact = artifacts.data.artifacts.find((artifact) => {
                                 return artifact.name == name
                             })
